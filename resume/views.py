@@ -37,7 +37,7 @@ class HomeView(View):
         context["duties"] = Duties.objects.all()
         return context
     def get(self, request):
-        return render(request, 'resume/home.html')
+        return render(request, 'resume/home.html', context=context)
 
 class AboutView(View):
     template_name='resume/about.html'
