@@ -1,0 +1,218 @@
+{
+    "Organization": {
+        "0": {
+            "name": "Farmingdale State College",
+            "location": "Farmingdale, NY",
+            "industry": "Education and training"
+        },
+        "1": {
+            "name": "Suffolk University",
+            "location": "Boston, MA",
+            "industry": "Education and training"
+        },
+        "2": {
+            "name": "San Jose State University",
+            "location": "San Jose, CA",
+            "industry": "Education and training"
+        },
+        "3": {
+            "name": "MediBid",
+            "location": "Houston, TX",
+            "industry": "Healthcare"
+        }
+    },
+    "Skill": {
+        "R": {
+            "name": "R",
+            "comments": "",
+            "level": "a"
+        },
+        "Python": {
+            "name": "Python",
+            "comments": "",
+            "level": "b"
+        },
+        "NetLogo": {
+            "name": "NetLogo",
+            "comments": "",
+            "level": "a"
+        },
+        "Django": {
+            "name": "Django",
+            "comments": "",
+            "level": "c"
+        },
+        "SQL": {
+            "name": "SQL",
+            "comments": "",
+            "level": "c"
+        },
+        "Clojure": {
+            "name": "Clojure",
+            "comments": "",
+            "level": "c"
+        },
+        "Linux": {
+            "name": "Linux Utilities",
+            "comments": "I've been using Linux as my desktop environment since 2009.",
+            "level": "b"
+        },
+        "Git": {
+            "name": "Git",
+            "comments": "",
+            "level": "b"
+        },
+        "Regression": {
+            "name": "Multiple Linear Regression",
+            "comments": "",
+            "level": "a"
+        },
+        "Logistic": {
+            "name": "Logistic Regression and Classification",
+            "comments": "",
+            "level": "b"
+        },
+        "Clustering": {
+            "name": "Clustering",
+            "comments": "",
+            "level": "a"
+        },
+        "Javascript": {
+            "name": "Javascript and Node",
+            "comments": "",
+            "level": "c"
+        },
+        "Dataviz": {
+            "name": "Data Visualization",
+            "comments": "",
+            "level": "b"
+        },
+        "ML": {
+            "name": "Machine Learning",
+            "comments": "",
+            "level": "b"
+        },
+        "Deep learning": {
+            "name": "Deep Learning",
+            "comments": "",
+            "level": "b"
+        },
+        "Data cleaning": {
+            "name": "Data Cleaning",
+            "comments": "",
+            "level": "a"
+        }
+    },
+    "Certificate": {
+        "dj4e": {
+            "name": "Django For Everybody",
+            "description": "",
+            "issuer": "Coursera",
+            "date": "2022-05-05",
+            "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/LYH429BMVUN5"
+        },
+        "deep learning": {
+            "name": "Deep Learning",
+            "description": "",
+            "issuer": "Coursera",
+            "date": "2020-06-14",
+            "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/WR7S2A42ST93"
+        },
+        "machine learning": {
+            "name": "Machine Learning",
+            "description": "",
+            "issuer": "Coursera",
+            "date": "2019-10-01",
+            "url": "https://www.coursera.org/account/accomplishments/verify/N6J9WYM6QWES"
+        }
+    },
+    "Degree": {
+        "bs": {
+            "name": "Bachelors",
+            "degree": "B.Sc. Economics",
+            "school": 2,
+            "year": 2010,
+            "distinctions": "Magna Cum Laude"
+        },
+        "ma": {
+            "name": "Masters",
+            "degree": "M.A. Economics",
+            "school": 1,
+            "year": 2012,
+            "distinctions": ""
+        },
+        "phd": {
+            "name": "Doctorate",
+            "degree": "Ph.D. Economics",
+            "school": 1,
+            "year": 2014,
+            "distinctions": ""
+        }
+    },
+    "Duties": {
+        "mentoring": {
+            "description": "Mentoring students through research projects and college more broadly, solving techincal problems (e.g. helping students solve R programming problems).",
+            "job": 0
+        },
+        "managing": {
+            "description": "Managing 8-11 classes per year with 100+ students at a time",
+            "job": 0
+        },
+        "making_classes": {
+            "description": "Creating and maintaining classes on subjects including R, Agent Based Modeling, Network Theory, Econometrics, and Mathematical methods",
+            "job": 0
+        },
+        "evaluating_workers": {
+            "description": "Evaluating current and prospective colleagues--observing adjuncts, external instructors, and chairing/participating on search committees.",
+            "job": 0
+        },
+        "operations": {
+            "description": "Overseeing operational duties within organization (e.g. chairing department committees, authoring department self-study, etc.) in a growing department.",
+            "job": 0
+        },
+        "other": {
+            "description": "",
+            "job": 0
+        },
+        "other2": {
+            "description": "",
+            "job": 0
+        }
+    },
+    "ProfessionalSummary": {
+        "0": {
+            "elevator_pitch": "Creative problem solver looking to provide value to stakeholders.",
+            "tech_skills": "Quick learner already skilled in Python and R, but ready to take on new challenges.",
+            "soft_skills": "Curious and self-motivated to build reliable and effective sytems while supporting teammates."
+        }
+    },
+    "Project": {
+        "efw_clustering": {
+            "title": "Clusters of Economic Freedom Revisted",
+            "description": "By clustering countries based on their data in the Economic Freedom of the World index, I am able to double the portion of variance explained for a variety of models examining the impact of institutional quality on a variety of outcomes (e.g. economic growth, human development, etc.).",
+            "url": "https://rickweber.shinyapps.io/Clusters_of_Economic_Freedom/"
+
+        },
+        "wordle_search": {
+            "title": "Wordle Search",
+            "description": "A python script to help me pick a better guess for Wordle",
+            "url": "https://github.com/RickWeber/wordle_search"
+        }
+    },
+    "Experience": {
+        "Associate": {
+            "title": "Associate Professor",
+            "location": "Farmingdale, NY",
+            "organization": 0,
+            "start": 2021,
+            "end": "present"
+        },
+        "Assistant": {
+            "title": "Assistant Professor",
+            "location": "Farmingdale, NY",
+            "organization": 0,
+            "start": 2014,
+            "end": 2021
+        }
+    }
+}

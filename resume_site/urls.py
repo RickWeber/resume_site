@@ -19,7 +19,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
+    path('', include('resume.urls')),
     path('linkedin/', RedirectView.as_view(url='https://linkedin.com/in/another-rick-weber')),
     path('github/', RedirectView.as_view(url='https://github.com/RickWeber')),
 ]

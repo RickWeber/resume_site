@@ -1,0 +1,30 @@
+{% extends "resume/base.html" %}
+{% block content %}
+<h1>Rick Weber</h1>
+
+<!-- First: highlights -->
+<!-- Second: blurb -->
+<!-- Third: skills -->
+<ul>
+    <li>stuff</li>
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+</ul>
+<!-- Fourth: experience -->
+<h2>Experience</h2>
+<ul>
+{% for experience in experiences %}
+<li>{{experience.title}}</li>
+<!-- duties -->
+{% endfor %}
+</ul>
+<!-- Fifth: schooling -->
+<h2>Training</h2>
+<ul>
+    {% for degree in degrees %}
+        <li>{degree}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
