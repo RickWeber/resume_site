@@ -3,13 +3,13 @@ from django.views.generic import TemplateView
 from .models import (
     Duties,
     Experience,
+    ProfessionalSummary,
     Skill,
     Degree,
     Project,
     Certificate,
+    Blurb
 )
-
-# Create your views here.
 
 def home(request):
     context = {
@@ -35,12 +35,17 @@ class HomeView(TemplateView):
         context["certificates"] = Certificate.objects.all()
         context["degrees"] = Degree.objects.all()
         context["duties"] = Duties.objects.all()
+        context["blurb"] = Blurb.objects.last()
+        context["summary"] = ProfessionalSummary.objects.last()
         return context
 
 class AboutView(TemplateView):
     template_name='resume/about.html'
-    def get(self, request):
-        return render(request, 'resume/about.html')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["blurb"] = Blurb.objects.last()
+        context["summary"] = ProfessionalSummary.objects.last()
+        return context
 
 
 class PortfolioView(TemplateView):

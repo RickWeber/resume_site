@@ -7,7 +7,8 @@ from .models import (
     Certificate,
     Skill,
     Project,
-    ProfessionalSummary
+    ProfessionalSummary,
+    Blurb
 )
 
 admin.site.register(Organization)
@@ -18,3 +19,4 @@ admin.site.register(Certificate)
 admin.site.register(Skill)
 admin.site.register(Project)
 admin.site.register(ProfessionalSummary)
+admin.site.register(Blurb)

@@ -55,6 +55,7 @@ class Skill(models.Model):
     class Meta:
         verbose_name = "Skill"
         verbose_name_plural = "Skills"
+        ordering = ["level"]
     name = models.CharField(max_length=40, blank=True, null=True)
     comments = models.CharField(max_length=100, null=True, blank=True)
     LEVELS = (
@@ -82,6 +83,11 @@ class ProfessionalSummary(models.Model):
     def __str__(self):
         return f"Summary #{self.pk}"
 
+
+class Blurb(models.Model):
+    blurb = models.TextField()
+    def __str__(self):
+        return self.blurb[:50] if len(self.blurb) > 50 else self.blurb
 
 #class UserProfile(models.Model):
 #    pass
