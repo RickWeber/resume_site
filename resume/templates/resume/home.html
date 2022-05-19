@@ -15,15 +15,20 @@
 <h2>Experience</h2>
 <ul>
 {% for experience in experiences %}
-<li>{{experience.title}}</li>
+<li>{{experience.title}}, {{experience.organization}}, {{experience.organization.location}}</li>
 <!-- duties -->
+<ul>
+{% for duty in experience.duties %}
+<li>{{ duty.description }}</li>
+{% endfor %}
+</ul>
 {% endfor %}
 </ul>
 <!-- Fifth: schooling -->
 <h2>Training</h2>
 <ul>
     {% for degree in degrees %}
-        <li>{degree}</li>
+        <li>{{degree.degree}}, {{degree.school}}, {{degree.school.location}}, {{degree.year|date:'Y'}}</li>
     {% endfor %}
 </ul>
 

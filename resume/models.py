@@ -11,20 +11,24 @@ class Organization(models.Model):
 
 class Experience(models.Model):
     title = models.CharField(max_length=50)
-    location = models.CharField(max_length=100)
+    #location = models.CharField(max_length=100) # TODO: I can drop this
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
     start = models.CharField(max_length=35)
     end = models.CharField(max_length=35)
     def __str__(self):
-        return self.name
+        return self.title
 
 
 class Duties(models.Model):
     class Meta:
         verbose_name = "Duty"
         verbose_name_plural = "Duties"
+    short_description = models.CharField(max_length=50, default="duty description")
     description = models.CharField(max_length=250)
-    job = models.ForeignKey(Experience, on_delete=models.CASCADE)
+    #job = models.ForeignKey(Experience, on_delete=models.CASCADE)
+    job = models.ManyToManyField(Experience)
+    def __str__(self):
+        return self.short_description
 
 
 class Degree(models.Model):
@@ -67,12 +71,16 @@ class Project(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500, null=True, blank=True)
     url = models.URLField()
+    def __str__(self):
+        return self.title
 
 
 class ProfessionalSummary(models.Model):
     elevator_pitch = models.CharField(max_length=250, null=True, blank=True)
     tech_skills = models.CharField(max_length=250, null=True, blank=True)
     soft_skills = models.CharField(max_length=250, null=True, blank=True)
+    def __str__(self):
+        return f"Summary #{self.pk}"
 
 
 #class UserProfile(models.Model):
