@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views import View
+from django.views.generic import TemplateView
 from .models import (
     Duties,
     Experience,
@@ -25,7 +25,7 @@ def home(request):
         context['experiences'][ex]['duties'] = duties
     return render(request, 'resume/home.html', context)
 
-class HomeView(View):
+class HomeView(TemplateView):
     template_name='resume/home.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -39,13 +39,13 @@ class HomeView(View):
     def get(self, request):
         return render(request, 'resume/home.html', context=context)
 
-class AboutView(View):
+class AboutView(TemplateView):
     template_name='resume/about.html'
     def get(self, request):
         return render(request, 'resume/about.html')
 
 
-class PortfolioView(View):
+class PortfolioView(TemplateView):
     template_name='resume/portfolio_item.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
