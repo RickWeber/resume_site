@@ -27,7 +27,7 @@ class Duties(models.Model):
     description = models.CharField(max_length=250)
     #job = models.ForeignKey(Experience, on_delete=models.CASCADE)
     job = models.ManyToManyField(Experience)
-    order = models.IntegerField()
+    order = models.IntegerField(default=5)
     def __str__(self):
         return self.short_description
 
