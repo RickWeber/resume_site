@@ -1,0 +1,2 @@
+#! /usr/bin/sh
+GIT_WORK_TREE=/home/rick/resume_site git checkout -qf [--detach] [production]
