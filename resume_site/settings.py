@@ -9,10 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-<<<<<<< HEAD
-
-=======
->>>>>>> 61198899668a98a4b1a45fa8d423b95ca16a3c52
 import os
 import json
 from pathlib import Path
@@ -38,11 +34,7 @@ SECRET_KEY = config["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['hirerick.com', '66.175.212.152', '2600:3c03::f03c:93ff:fe1f:7ef7']
-=======
-ALLOWED_HOSTS = ['hirerick.com','66.175.212.152','2600:3c03::f03c:93ff:fe1f:7ef7']
->>>>>>> 61198899668a98a4b1a45fa8d423b95ca16a3c52
 
 
 # Application definition
@@ -142,7 +134,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
 =======
 # Email settings
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -152,5 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #EMAIL_HOST_USER = config["EMAIL_USER"]
 #EMAIL_HOST_PASSWORD = config["EMAIL_PASS"]
 
->>>>>>> 61198899668a98a4b1a45fa8d423b95ca16a3c52
 SECURE_SSL_REDIRECT = True
