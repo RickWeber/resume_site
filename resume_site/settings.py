@@ -32,7 +32,7 @@ with open('/etc/resume_site-config.json') as config_file:
 SECRET_KEY = config["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['hirerick.com', '66.175.212.152', '2600:3c03::f03c:93ff:fe1f:7ef7']
 
@@ -134,7 +134,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-=======
 # Email settings
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #EMAIL_HOST = 'smtp.gmail.com'

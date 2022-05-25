@@ -23,6 +23,7 @@ class Duties(models.Model):
     class Meta:
         verbose_name = "Duty"
         verbose_name_plural = "Duties"
+        ordering = ["order"]
     short_description = models.CharField(max_length=50, default="duty description")
     description = models.CharField(max_length=250)
     #job = models.ForeignKey(Experience, on_delete=models.CASCADE)
