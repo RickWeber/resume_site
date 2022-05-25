@@ -32,15 +32,16 @@ with open('/etc/resume_site-config.json') as config_file:
 SECRET_KEY = config["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['hirerick.com', '66.175.212.152', '2600:3c03::f03c:93ff:fe1f:7ef7']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'hirerick.com', '66.175.212.152', '2600:3c03::f03c:93ff:fe1f:7ef7']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'resume.apps.ResumeConfig',
+    'wordle_search.apps.WordleSearchConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 #    'django_extensions',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -142,4 +144,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #EMAIL_HOST_USER = config["EMAIL_USER"]
 #EMAIL_HOST_PASSWORD = config["EMAIL_PASS"]
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
