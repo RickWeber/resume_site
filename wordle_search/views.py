@@ -13,6 +13,21 @@ from .models import (
 
 class HomeView(TemplateView):
     template_name='wordle_search/home.html'
+
+    def post(self, request):
+        if request.POST.get("Submit"):
+            game = Game()
+            form = GuessForm()
+            previous_guesses = request.POST.get("previous_guesses")
+            previous_guesses = previous_guesses.split(" ")
+            previous_guesses += request.POST.get("guess")
+            for guess in previous_guesses:
+                game.make_guess(guess)
+            ctx = {'form': form, 'guesses': " ".join(previous_guesses),
+            'possible_words': game.show_possible_words(),
+            'previous_flags': game.flags}
+            return render(request, self.template_name, ctx)
+
     def get(self, request):
         game = Game()
         form = GuessForm()
@@ -20,24 +35,18 @@ class HomeView(TemplateView):
         'possible_words': game.show_possible_words(), 
         'game': game}
         return render(request, self.template_name, ctx)
-
-    def post(self, request):
-        game = request.game
-        form = GuessForm(request.POST)
-        if form.is_valid():
-            game.make_guess(form.guess)
-            ctx = {'form': form,
-            'possible_words': game.show_possible_words(),
-            'game': game}
-        if not form.is_valid():
-            ctx = {'form': form,
-            'possible_words': game.show_possible_words(),
-            'game': game}
-            return render(request, self.template_name, ctx)
-
-        messages.add_message(request, messages.SUCCESS, 'Guess accepted.')
-        return render(request, self.template_name, ctx)
-        #return redirect(reverse('wordle_search:wordle_home'))
+#
+#    def post(self, request):
+#        game = request.game
+#        form = GuessForm(request.POST)
+#        if request.POST.get("guess"):
+#            game = Game.objects.last()
+#            Game().make_guess(request.POST.get("guess"))
+#
+#
+#        messages.add_message(request, messages.SUCCESS, 'Guess accepted.')
+#        return render(request, self.template_name, ctx)
+#        #return redirect(reverse('wordle_search:wordle_home'))
 
 
 class CheatView(DetailView):
